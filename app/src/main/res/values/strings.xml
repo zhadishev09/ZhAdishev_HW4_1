@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ZhAdishev_HW4_1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="titlr_profileFragment">ProfileFragment</string>
+    <string name="title_profileFragment">profileFragment</string>
+    <string name="title_profilefragment">ProfileFragment</string>
+    <string name="title__profilefragment">profileFragment</string>
+</resources>
