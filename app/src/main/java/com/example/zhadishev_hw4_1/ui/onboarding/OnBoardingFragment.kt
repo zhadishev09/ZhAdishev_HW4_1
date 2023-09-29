@@ -1,0 +1,45 @@
+package com.example.zhadishev_hw4_1.ui.onboarding
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.zhadishev_hw4_1.R
+import com.example.zhadishev_hw4_1.data.local.Pref
+import com.example.zhadishev_hw4_1.databinding.FragmentOnboardingBinding
+import com.example.zhadishev_hw4_1.databinding.FragmentTaskBinding
+import com.example.zhadishev_hw4_1.ui.onboarding.Adapter.OnBoardingAdapter
+
+class OnBoardingFragment: Fragment() {
+
+    private lateinit var binding: FragmentOnboardingBinding
+
+    private val pref by lazy{
+        Pref(requireContext())
+    }
+    private val adapter = OnBoardingAdapter(this::onClick)
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.viewPage.adapter = adapter
+
+    }
+    private fun onClick(){
+        pref.userShowed()
+        findNavController().navigateUp()
+    }
+}
+
+
+

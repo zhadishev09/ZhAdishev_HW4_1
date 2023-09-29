@@ -27,4 +27,13 @@
         android:name="com.example.zhadishev_hw4_1.ui.profileFragment.ProfileFragment"
         android:label="@string/title_profilefragment"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.zhadishev_hw4_1.ui.task.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.zhadishev_hw4_1.ui.onboarding.OnBoardingFragment"
+        android:label="OnBoardingFragment" />
 </navigation>
