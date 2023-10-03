@@ -30,8 +30,8 @@ class TaskFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnSave.setOnClickListener {
             val data = Task(
-                title = binding.edTitle.text.toString(),
-                desc = binding.edDesc.text.toString()
+                title = binding.edTitle.editText.toString(),
+                desc = binding.edDesc.editText.toString()
 
             )
             setFragmentResult(RESULT_KEY, bundleOf(TASK_KEY to data))
